@@ -71,13 +71,41 @@ function Navbar({
             alignItems={"center"}
             sx={{ display: { xs: "none", sm: "flex" } }}
           >
-            <Typography variant="h5" component="h5" color="black">
-              Elanco1
-            </Typography>
-            <Typography variant="h6" component="p" color="black">
-              Elanco2
-            </Typography>
+            <Link
+              color="black"
+              sx={{
+                "&:hover": { cursor: "pointer" },
+                fontSize: "15px",
+              }}
+              underline="hover"
+              onClick={(e: LinkEvent) => {
+                e.preventDefault();
+                navigate("/applications");
+              }}
+            >
+              Applications
+            </Link>
+            <Link
+              color="black"
+              sx={{
+                "&:hover": { cursor: "pointer" },
+                fontSize: "15px",
+                marginLeft: "25px",
+              }}
+              underline="hover"
+              onClick={(e: LinkEvent) => {
+                e.preventDefault();
+                navigate("/resources");
+              }}
+            >
+              Resources
+            </Link>
           </Box>
+          <Box
+            justifyContent="center"
+            alignItems={"center"}
+            sx={{ display: { xs: "none", sm: "flex" } }}
+          ></Box>
         </Box>
       </Box>
     </>
