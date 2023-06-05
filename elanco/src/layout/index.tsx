@@ -1,8 +1,8 @@
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import Navbar from "./components/navbar";
 import React, { useState } from "react";
 import Sidebar from "./components/sidebar";
+import { Outlet } from "react-router-dom";
 export default function Layout() {
   const [state, setState] = useState<boolean>(false);
 
@@ -13,10 +13,12 @@ export default function Layout() {
   return (
     <>
       <Navbar sidebarState={state} toggleSideBar={setState} />
-      <Button onClick={() => toggleDrawer(true)}>left</Button>
       <Drawer anchor={"left"} open={state} onClose={() => toggleDrawer(false)}>
         <Sidebar toggleDrawer={toggleDrawer} />
       </Drawer>
+      <div id="detail">
+        <Outlet />
+      </div>
     </>
   );
 }
