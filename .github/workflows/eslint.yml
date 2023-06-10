@@ -40,7 +40,7 @@ jobs:
       - name: Run ESLint
         run: |
           cd elanco
-          npx eslint . --ext .js,.jsx,.ts,.tsx,.json --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
+          npx eslint
         continue-on-error: false
 
       - name: Upload analysis results to GitHub
