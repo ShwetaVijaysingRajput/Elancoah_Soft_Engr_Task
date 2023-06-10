@@ -52,5 +52,5 @@ jobs:
       - name: Run ESLint
         run: |
           cd elanco
-          npx eslint .
+          npx eslint . --max-warnings 0
         continue-on-error: false
