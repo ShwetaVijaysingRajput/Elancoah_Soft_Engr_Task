@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout";
 import Home from "../modules/home";
+import ErrorBoundary from "../common/components/error-boundary/ErrorBoundary";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -8,11 +9,19 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home />,
+        element: (
+          <ErrorBoundary>
+            <Home />
+          </ErrorBoundary>
+        ),
       },
       {
         path: "applications",
-        element: <Home />,
+        element: (
+          <ErrorBoundary>
+            <Home />
+          </ErrorBoundary>
+        ),
       },
     ],
   },
