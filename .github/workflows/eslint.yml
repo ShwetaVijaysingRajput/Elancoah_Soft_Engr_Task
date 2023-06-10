@@ -48,3 +48,9 @@ jobs:
         with:
           sarif_file: elanco/eslint-results.sarif
           wait-for-processing: true
+
+      - name: Run ESLint
+        run: |
+          cd elanco
+          npx eslint .
+        continue-on-error: false
