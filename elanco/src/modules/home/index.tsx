@@ -36,7 +36,7 @@ function Home() {
       }
     }
   }, [loading]);
-  const k = 0;
+
   const onGridReady = useCallback(
     (_params: any) => {
       if (rowData.length === 0) {
