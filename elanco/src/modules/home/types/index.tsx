@@ -1,3 +1,8 @@
+export interface TagObj {
+  "app-name": string;
+  environment: string;
+  "business-unit": string;
+}
 export interface RowObj {
   ConsumedQuantity: string;
   Cost: string;
@@ -6,7 +11,7 @@ export interface RowObj {
   MeterCategory: string;
   ResourceGroup: string;
   ResourceLocation: string;
-  Tags: Object;
+  Tags: TagObj;
   UnitOfMeasure: string;
   Location: string;
   ServiceName: string;
