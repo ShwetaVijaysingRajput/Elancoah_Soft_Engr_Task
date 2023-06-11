@@ -2,25 +2,6 @@ import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
 import "./index.css";
 
-/*
-
-.aboutContainer {
-  height: calc(100vh - 50px);
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 40px;
-}
-
-.childContainer {
-  width: 48%;
-  height: 100%;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 40px;
-}
-*/
 function About() {
   return (
     <Box
