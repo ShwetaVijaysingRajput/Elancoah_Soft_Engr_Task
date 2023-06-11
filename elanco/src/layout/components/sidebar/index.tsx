@@ -13,8 +13,6 @@ function Sidebar({ toggleDrawer }: { toggleDrawer: (param: boolean) => void }) {
       display={"flex"}
       flexDirection="column"
       justifyContent={"space-between"}
-
-      //   onKeyDown={() => toggleDrawer(false)}
     >
       <Box>
         <Box display="flex" justifyContent={"end"} alignItems="end" mt={5}>

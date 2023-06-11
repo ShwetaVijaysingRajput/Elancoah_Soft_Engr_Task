@@ -17,7 +17,6 @@ export class ErrorBoundary extends Component<any, StateType> {
   }
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
       return <h1 color="red">Something went wrong.</h1>;
     }
 
