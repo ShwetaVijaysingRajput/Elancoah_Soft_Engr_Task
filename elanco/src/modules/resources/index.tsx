@@ -5,20 +5,20 @@ import CommonTable from "../../common/components/table";
 import { AppRowObj } from "./types";
 import { colDef } from "./constants";
 import "./index.css";
-function Applications() {
+function Resources() {
   const [sel, setSel] = useState<string>("");
   return (
     <>
       <ShowInfo
-        getUrl={apiUrls.getApplications}
+        getUrl={apiUrls.getResources}
         sel={sel}
         setSel={setSel}
-        label="App"
+        label="resources"
       />
-      <div className="containerStyleForApp">
+      <div className="containerStyleForResources">
         <CommonTable<AppRowObj>
           colDef={colDef}
-          getUrl={apiUrls.getApplicationByName}
+          getUrl={apiUrls.getResourcesByName}
           sel={sel}
         />
       </div>
@@ -26,4 +26,4 @@ function Applications() {
   );
 }
 
-export default Applications;
+export default Resources;
