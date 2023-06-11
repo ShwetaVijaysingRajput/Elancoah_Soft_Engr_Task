@@ -16,10 +16,12 @@ function ShowInfo({
   getUrl,
   sel,
   setSel,
+  label,
 }: {
   getUrl: string;
   sel: string;
   setSel: (param: string) => void;
+  label: string;
 }) {
   const [dropData, setDropData] = useState<DropData>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -77,7 +79,7 @@ function ShowInfo({
           ml={2}
           m={1}
         >
-          Select Application to view details
+          Select {label} to view details
         </Typography>
         <Box
           width={{ xs: "100px", sm: "500px" }}
@@ -86,11 +88,11 @@ function ShowInfo({
           alignItems={{ xs: "center", sm: "start" }}
         >
           <FormControl fullWidth>
-            <InputLabel id="App">App</InputLabel>
+            <InputLabel id="label">{label}</InputLabel>
             <Select
-              labelId="App"
+              labelId={label}
               id="App-select"
-              label="Age"
+              label={"label"}
               disabled={loading}
               onChange={handleChange}
               value={sel}

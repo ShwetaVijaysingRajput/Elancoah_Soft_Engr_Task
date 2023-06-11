@@ -69,7 +69,7 @@ function Navbar({
           <Box
             justifyContent="center"
             alignItems={"center"}
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: {} }}
           >
             <Link
               color="black"
@@ -105,7 +105,23 @@ function Navbar({
             justifyContent="center"
             alignItems={"center"}
             sx={{ display: { xs: "none", sm: "flex" } }}
-          ></Box>
+          >
+            <Link
+              color="black"
+              sx={{
+                "&:hover": { cursor: "pointer" },
+                fontSize: "15px",
+                marginLeft: "25px",
+              }}
+              underline="hover"
+              onClick={(e: LinkEvent) => {
+                e.preventDefault();
+                navigate("/about");
+              }}
+            >
+              About
+            </Link>
+          </Box>
         </Box>
       </Box>
     </>
