@@ -47,6 +47,7 @@ function Navbar({
             >
               Elanco
             </Link>
+
             <Typography
               variant="h6"
               component="p"
@@ -66,6 +67,7 @@ function Navbar({
               </Typography>
             </Typography>
           </Box>
+
           <Box
             justifyContent="center"
             alignItems={"center"}
@@ -85,6 +87,7 @@ function Navbar({
             >
               Applications
             </Link>
+
             <Link
               color="black"
               sx={{
@@ -101,6 +104,7 @@ function Navbar({
               Resources
             </Link>
           </Box>
+
           <Box
             justifyContent="center"
             alignItems={"center"}
