@@ -15,7 +15,6 @@ import { apiUrls } from "../../utils/api-constants";
 import "./index.css";
 import { AxiosError } from "axios";
 import LoadingOverlayComp from "./components/loading-overlay-component";
-
 function Home() {
   const [rowData, setRowData] = useState<RowData>([]);
   const backupData = useRef<RowData>([]);
