@@ -69,7 +69,7 @@ function Navbar({
           <Box
             justifyContent="center"
             alignItems={"center"}
-            sx={{ display: {} }}
+            sx={{ display: { xs: "none", sm: "flex" } }}
           >
             <Link
               color="black"
